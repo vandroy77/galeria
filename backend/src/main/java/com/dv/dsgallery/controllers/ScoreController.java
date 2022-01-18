@@ -21,4 +21,7 @@ public class ScoreController {
         MovieDTO movieDTO = scoreServices.SaveScore(dto);
         return movieDTO;
     };
+
+
+
 }
