@@ -19,6 +19,8 @@ function FormCard( { movieId }: Props) {
         axios.get(`${BASE_URL}/movies/${movieId}`).then
         (response => {
             setMovie(response.data)
+            //console.log(response.data)
+          
         });
     }, [movieId])
 
@@ -38,12 +40,12 @@ function FormCard( { movieId }: Props) {
             url: '/scores',
             data: {
                 email: email,
-                moveId: movieId,
+                movieId: movieId,
                 score: score
             }
         }
         axios(config).then(response =>{
-           // console.log(response)
+            //console.log(response.data)
            navigate("/")
         });
     }
